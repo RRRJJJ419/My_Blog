@@ -101,4 +101,8 @@ theme: hexo-theme-Tsu
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: https://github.com/RRRJJJ419/My_Blog.git
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: main
+# 部署
