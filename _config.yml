@@ -104,5 +104,5 @@ deploy:
   type: git
   repo: https://github.com/RRRJJJ419/My_Blog.git
   # example, https://github.com/hexojs/hexojs.github.io
-  branch: main
+  branch: [publish]
 # 部署
