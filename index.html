@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
-<title>Hexo</title>
+<title>GitHub Pages + Hexo</title>
 
 
 <link rel="stylesheet" href="/My_Blog/styles/main.css">
@@ -17,7 +17,7 @@
             <header>
 <div class="main">
 <div class="title">
-    <a href="#" class="logo">Hexo</a>
+    <a href="#" class="logo">GitHub Pages + Hexo</a>
 </div>
 <div class="site-nav">
     <ul id="menu" class="menu">
@@ -44,29 +44,122 @@
     
         <article class="post article-entry">
             <div class="post-title">
-                <a class="post-title-link text-underline" href="/My_Blog/2025/09/13/hello-world/">Machine Learning Note</a>
+                <a class="post-title-link text-underline" href="/My_Blog/2025/09/14/test/"></a>
+            </div>
+            <p class="sub">Sep 14 2025</p>
+            <div class="post-content">
+                
+                    
+                
+            </div>
+        </article>
+    
+        <article class="post article-entry">
+            <div class="post-title">
+                <a class="post-title-link text-underline" href="/My_Blog/2025/09/13/hello-world/">Titanic - Machine Learning from Disaster</a>
             </div>
             <p class="sub">Sep 13 2025</p>
             <div class="post-content">
                 
-                    <!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues). -->
+                    <hr>
+<!-- Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [documentation](https://hexo.io/docs/) for more info. If you get any problems when using Hexo, you can find the answer in [troubleshooting](https://hexo.io/docs/troubleshooting.html) or you can ask me on [GitHub](https://github.com/hexojs/hexo/issues). -->
 
-<h2 id="Quick-Start-123123"><a href="#Quick-Start-123123" class="headerlink" title="Quick Start  123123"></a>Quick Start  123123</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Dataset Description : <a target="_blank" rel="noopener" href="https://www.kaggle.com/competitions/titanic/data">Titanic</a></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><!-- ![圖片說明](/images/大頭貼.jpg) -->
-<img src="/images/大頭貼.jpg" alt="圖片說明" width="150" height="150"/>
+<h4 id="套件安裝"><a href="#套件安裝" class="headerlink" title="套件安裝:"></a>套件安裝:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#pip install sklearn</span></span><br><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line"><span class="comment"># 繪圖相關套件</span></span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">%matplotlib inline</span><br><span class="line">import matplotlib.gridspec as gridspec</span><br><span class="line">import seaborn as sns</span><br><span class="line">plt.style.use(<span class="string">&#x27;ggplot&#x27;</span>)</span><br><span class="line"></span><br><span class="line">from sklearn.preprocessing import LabelEncoder, OneHotEncoder <span class="comment"># 標籤編碼(Label)、獨熱編碼(OneHot)</span></span><br><span class="line">from sklearn.tree import DecisionTreeClassifier <span class="comment"># 決策樹(Decision Tree)</span></span><br><span class="line">from sklearn.ensemble import RandomForestClassifier <span class="comment"># 隨機森林(Random Forest)</span></span><br><span class="line"></span><br><span class="line">from IPython.display import display</span><br><span class="line">import warnings</span><br><span class="line">warnings.filterwarnings(<span class="string">&#x27;ignore&#x27;</span>)</span><br></pre></td></tr></table></figure>
 
+<br>
 
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h4 id="讀取檔案"><a href="#讀取檔案" class="headerlink" title="讀取檔案:"></a>讀取檔案:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df_train = pd.read_csv(<span class="string">&#x27;train.csv&#x27;</span>)</span><br><span class="line">df_test = pd.read_csv(<span class="string">&#x27;test.csv&#x27;</span>)</span><br><span class="line">submit = pd.read_csv(<span class="string">&#x27;gender_submission.csv&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>Training Data:<br><img src="/My_Blog/images/Titanic_train_data.png" alt="圖片說明"/><br>Testing Data:<br><img src="/My_Blog/images/Titanic_test_data.png" alt="圖片說明"/><br>Submit:<br><img src="/My_Blog/images/Titanic_submit.png" alt="圖片說明" width="150" height="150"/></p>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<hr>
+<ul>
+<li><h3 id="資料探索-EDA"><a href="#資料探索-EDA" class="headerlink" title="資料探索(EDA)&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;"></a>資料探索(EDA)&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</h3></li>
+</ul>
+<h4 id="資料型態"><a href="#資料型態" class="headerlink" title="資料型態:"></a>資料型態:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display(df_train.dtypes) <span class="comment"># 使用.dtypes查看欄位資料型態</span></span><br><span class="line">display(df_test.dtypes)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<br>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="資料缺失值數量"><a href="#資料缺失值數量" class="headerlink" title="資料缺失值數量:"></a>資料缺失值數量:</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display(df_train.isnull().<span class="built_in">sum</span>()) <span class="comment"># 使用.isnull()判別是否為空再.sum()加總</span></span><br><span class="line">display(df_test.isnull().<span class="built_in">sum</span>())</span><br></pre></td></tr></table></figure>
+<h4 id="計算缺失值數量-比例"><a href="#計算缺失值數量-比例" class="headerlink" title="計算缺失值數量&amp;比例"></a>計算缺失值數量&amp;比例</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">missing_train = df_train.isnull().<span class="built_in">sum</span>()</span><br><span class="line">missing_train = missing_train[missing_train &gt; 0]</span><br><span class="line">missing_train_percent = (missing_train / len(df_train)) * 100</span><br><span class="line">missing_train_table = pd.DataFrame(&#123;<span class="string">&#x27;Missing Count&#x27;</span>: missing_train, <span class="string">&#x27;Percentage (%)&#x27;</span>: missing_train_percent.round(2)&#125;)</span><br><span class="line">display(missing_train_table)</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_data_lost.png" alt="圖片說明" width="500" height="500"/>
+
+<br>
+<br>
+
+<h4 id="合併訓練和測試集"><a href="#合併訓練和測試集" class="headerlink" title="合併訓練和測試集"></a>合併訓練和測試集</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_data = pd.concat([df_train, df_test], ignore_index=True)</span><br><span class="line">df_data</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="欄位內容數量計算"><a href="#欄位內容數量計算" class="headerlink" title="欄位內容數量計算"></a>欄位內容數量計算</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 存活和未存活的數量</span></span><br><span class="line">Survived_Counts = df_data[<span class="string">&#x27;Survived&#x27;</span>].value_counts().reset_index()</span><br><span class="line">Survived_Counts.columns = [<span class="string">&#x27;Survived&#x27;</span>,<span class="string">&#x27;Counts&#x27;</span>]</span><br><span class="line">Survived_Counts</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_survived.png" alt="圖片說明" width="150" height="150"/>
+
+<h4 id="圓餅圖"><a href="#圓餅圖" class="headerlink" title="(圓餅圖)"></a>(圓餅圖)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.figure(figsize=(10,5))</span><br><span class="line">df_data[<span class="string">&#x27;Survived&#x27;</span>].value_counts().plot(kind=<span class="string">&#x27;pie&#x27;</span>, colors=[<span class="string">&#x27;lightcoral&#x27;</span>,<span class="string">&#x27;skyblue&#x27;</span>], autopct=<span class="string">&#x27;%1.2f%%&#x27;</span>)</span><br><span class="line">plt.title(<span class="string">&#x27;Survival&#x27;</span>)  <span class="comment"># 圖標題</span></span><br><span class="line">plt.ylabel(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_survived_piechart.png" alt="圖片說明" width="200" height="200"/>
+
+<br>
+<br>
+<br>
+
+<h4 id="欄位間的相關係數"><a href="#欄位間的相關係數" class="headerlink" title="欄位間的相關係數"></a>欄位間的相關係數</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 其他數值欄位和存活欄位之間的相關係數</span></span><br><span class="line">numeric_df_train = df_train.select_dtypes(include=np.number) <span class="comment"># 從df_train中選取出所有資料型態為數值的欄位，並建立一個新的DataFrame</span></span><br><span class="line">Corr_Matrix = numeric_df_train.corr()  <span class="comment"># 計算相關係數</span></span><br><span class="line">Corr_Matrix</span><br><span class="line">Corr = Corr_Matrix.loc[<span class="string">&#x27;Survived&#x27;</span>,:].sort_values() <span class="comment">#從Corr_Matrix中選取出&#x27;Survived&#x27;與其他所有欄位之間的相關係數，並將這些相關係數從小到大排序。[:-1]則會移除最後一個值，因為&#x27;Survived&#x27;欄位與自身的相關係數永遠是1，通常在相關性分析中會忽略這個值。</span></span><br><span class="line">Corr = pd.DataFrame(&#123;<span class="string">&#x27;Survived&#x27;</span>:Corr&#125;) <span class="comment">#將排序後的相關係數Series轉換成一個新的DataFrame Corr，並將欄位名稱設為&#x27;Survived&#x27;。</span></span><br><span class="line">Corr</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_survived_cor.png" alt="圖片說明" width="150" height="150"/>
+
+<br>
+<br>
+
+<hr>
+<ul>
+<li><h3 id="特徵工程"><a href="#特徵工程" class="headerlink" title="特徵工程&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;"></a>特徵工程&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</h3></li>
+</ul>
+<h4 id="字串分割"><a href="#字串分割" class="headerlink" title="字串分割"></a>字串分割</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>] = df_data.Name.str.split(<span class="string">&#x27;, &#x27;</span>, <span class="built_in">expand</span>=True)[1]  <span class="comment"># 使用(, )作為分隔符號，[1]選取分割後DataFrame的第二個欄位。根據姓名的常見格式 &quot;LastName, Title.FirstName&quot;，第二個部分通常包含稱謂和名字 ex:Kelly, Mr.James</span></span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>] = df_data.Title.str.split(<span class="string">&#x27;.&#x27;</span>, <span class="built_in">expand</span>=True)[0]  <span class="comment"># 在使用(.)作為分割符號，[0]選取分割後DataFrame的第一個欄位。根據&quot;Title.FirstName&quot;的格式，第一個部分就是稱謂本身</span></span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>].unique()</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="欄位類別整合取代"><a href="#欄位類別整合取代" class="headerlink" title="欄位類別整合取代"></a>欄位類別整合取代</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#將某些稱謂取代集合成另一種稱謂</span></span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>] = df_data.Title.replace([<span class="string">&#x27;Don&#x27;</span>,<span class="string">&#x27;Rev&#x27;</span>,<span class="string">&#x27;Dr&#x27;</span>,<span class="string">&#x27;Major&#x27;</span>,<span class="string">&#x27;Lady&#x27;</span>,<span class="string">&#x27;Sir&#x27;</span>,<span class="string">&#x27;Col&#x27;</span>,<span class="string">&#x27;Capt&#x27;</span>,<span class="string">&#x27;Countess&#x27;</span>,<span class="string">&#x27;Jonkheer&#x27;</span>,<span class="string">&#x27;Dona&#x27;</span>], <span class="string">&#x27;Rare&#x27;</span>)</span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>] = df_data.Title.replace([<span class="string">&#x27;Ms&#x27;</span>,<span class="string">&#x27;Mlle&#x27;</span>], <span class="string">&#x27;Miss&#x27;</span>)</span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>] = df_data.Title.replace(<span class="string">&#x27;Mme&#x27;</span>, <span class="string">&#x27;Mrs&#x27;</span>)</span><br><span class="line">df_data[<span class="string">&#x27;Title&#x27;</span>].unique()</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="去除欄位"><a href="#去除欄位" class="headerlink" title="去除欄位"></a>去除欄位</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df_data.drop(<span class="string">&#x27;Ticket&#x27;</span>,axis=1,inplace=True)</span><br><span class="line">df_data.drop(<span class="string">&#x27;Survived&#x27;</span>, axis=1)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="根據缺失值產生二元欄位"><a href="#根據缺失值產生二元欄位" class="headerlink" title="根據缺失值產生二元欄位"></a>根據缺失值產生二元欄位</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#根據 &#x27;Age&#x27; 欄位是否有缺失值，建立一個新的二元欄位 &#x27;isAge&#x27;</span></span><br><span class="line">df_data[<span class="string">&#x27;isAge&#x27;</span>] = df_data[<span class="string">&#x27;Age&#x27;</span>].isnull().map(lambda x:0 <span class="keyword">if</span> x==True <span class="keyword">else</span> 1)</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="欄位交叉表"><a href="#欄位交叉表" class="headerlink" title="欄位交叉表"></a>欄位交叉表</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#計算並顯示有無年齡 &#x27;isAge&#x27; 和性別 &#x27;Sex&#x27; 欄位間的交叉表</span></span><br><span class="line">display(pd.crosstab(df_data.isAge, df_data.Sex, margins=True))</span><br><span class="line">display(pd.crosstab(df_data.isAge, df_data.Pclass, margins=True))</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_crosstab.png" alt="圖片說明" width="150" height="150"/>
+
+<h4 id="長條圖"><a href="#長條圖" class="headerlink" title="(長條圖)"></a>(長條圖)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#繪製兩個長條圖，分別顯示年齡資訊是否缺失 (&#x27;isAge&#x27;) 與性別 (&#x27;Sex&#x27;) 以及年齡資訊是否缺失 (&#x27;isAge&#x27;) 與艙等 (&#x27;Pclass&#x27;) 之間的關係</span></span><br><span class="line">fig, axs = plt.subplots(1,2,figsize=(14,5))</span><br><span class="line"></span><br><span class="line">plt.subplot(1,2,1)</span><br><span class="line">sns.countplot(data=df_data, x=df_data.Sex, hue=df_data.isAge, palette=[<span class="string">&#x27;lightcoral&#x27;</span>,<span class="string">&#x27;skyblue&#x27;</span>])</span><br><span class="line">plt.ylabel(<span class="string">&#x27;Counts&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.subplot(1,2,2)</span><br><span class="line">sns.countplot( data=df_data, x=df_data.Pclass, hue=df_data.isAge, palette=[<span class="string">&#x27;lightcoral&#x27;</span>,<span class="string">&#x27;skyblue&#x27;</span>])</span><br><span class="line">plt.ylabel(<span class="string">&#x27;&#x27;</span>)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_crosstab_countplot.png" alt="圖片說明" width="600" height="600"/>
+
+<br>
+<br>
+
+<h4 id="將一些非數值型的欄位轉換為數值型"><a href="#將一些非數值型的欄位轉換為數值型" class="headerlink" title="將一些非數值型的欄位轉換為數值型"></a>將一些非數值型的欄位轉換為數值型</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> col <span class="keyword">in</span> [<span class="string">&#x27;Title&#x27;</span>,<span class="string">&#x27;Ticket_info&#x27;</span>,<span class="string">&#x27;Cabin&#x27;</span>]:</span><br><span class="line">    df_data[col] = df_data[col].astype(<span class="string">&#x27;category&#x27;</span>).cat.codes <span class="comment"># 將欄位轉換為類別型資料，.cat.codes將類別型資料轉換為數值編碼。每個類別會被賦予一個唯一的整數</span></span><br><span class="line"></span><br><span class="line">df_data = pd.get_dummies(df_data, columns=[<span class="string">&#x27;Sex&#x27;</span>, <span class="string">&#x27;Embarked&#x27;</span>, <span class="string">&#x27;Title&#x27;</span>, <span class="string">&#x27;Ticket_info&#x27;</span>], drop_first=True) <span class="comment">#對指定的欄位進行One-Hot Encoding, drop_first=True會刪除每個類別的第一個One-Hot Encoding欄位，以避免多重共線性</span></span><br><span class="line"></span><br><span class="line">df_data.head()</span><br></pre></td></tr></table></figure>
+
+<br>
+<br>
+
+<hr>
+<ul>
+<li><h3 id="模型訓練"><a href="#模型訓練" class="headerlink" title="模型訓練&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;"></a>模型訓練&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;</h3></li>
+</ul>
+<h4 id="訓練集-測試集準備"><a href="#訓練集-測試集準備" class="headerlink" title="訓練集&#x2F;測試集準備"></a>訓練集&#x2F;測試集準備</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 將合併資料重新分割回訓練集和測試集</span></span><br><span class="line">Train = df_data[pd.notnull(df_data.Survived)]</span><br><span class="line">Test = df_data[pd.isnull(df_data.Survived)]</span><br><span class="line"></span><br><span class="line">Train.drop([<span class="string">&#x27;PassengerId&#x27;</span>, <span class="string">&#x27;Name&#x27;</span>], axis=1, inplace=True) </span><br><span class="line">Test.drop([<span class="string">&#x27;PassengerId&#x27;</span>,<span class="string">&#x27;Survived&#x27;</span>, <span class="string">&#x27;Name&#x27;</span>], axis=1, inplace=True) </span><br><span class="line"></span><br><span class="line">Y_Train = Train.Survived  <span class="comment"># 取將訓練集中的 Survived 單獨拆出，作為標籤Y</span></span><br><span class="line">X_Train = Train.drop([<span class="string">&#x27;Survived&#x27;</span>], axis=1)  <span class="comment"># 刪除 &#x27;Survived&#x27; 欄位</span></span><br></pre></td></tr></table></figure>
+
+<br>
+
+<h4 id="模型訓練-1"><a href="#模型訓練-1" class="headerlink" title="模型訓練"></a>模型訓練</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.tree import DecisionTreeClassifier</span><br><span class="line"></span><br><span class="line"><span class="comment"># 初始化決策樹分類器</span></span><br><span class="line">dt_model = DecisionTreeClassifier(random_state=42)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用訓練資料訓練模型</span></span><br><span class="line">dt_model.fit(X_Train, Y_Train)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;決策樹模型訓練完成！&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="模型預測"><a href="#模型預測" class="headerlink" title="模型預測"></a>模型預測</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用訓練好的決策樹模型對測試資料進行預測</span></span><br><span class="line">predictions = dt_model.predict(Test)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 將預測結果轉換為整數 (0或1)</span></span><br><span class="line">predictions = predictions.astype(int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 創建提交檔案的 DataFrame</span></span><br><span class="line">submission = pd.DataFrame(&#123;</span><br><span class="line">    <span class="string">&quot;PassengerId&quot;</span>: df_test[<span class="string">&#x27;PassengerId&#x27;</span>],</span><br><span class="line">    <span class="string">&quot;Survived&quot;</span>: predictions</span><br><span class="line">&#125;)</span><br><span class="line">display(submission)</span><br></pre></td></tr></table></figure>
+<img src="/My_Blog/images/Titanic_predict.png" alt="圖片說明" width="150" height="150"/>
+
+<br>
+<br>
+
+<h4 id="準確率-Accuracy"><a href="#準確率-Accuracy" class="headerlink" title="準確率 (Accuracy)"></a>準確率 (Accuracy)</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">from sklearn.metrics import accuracy_score</span><br><span class="line"></span><br><span class="line"><span class="comment"># 建立一個包含 PassengerId 和預測結果的DataFrame</span></span><br><span class="line">predictions_aligned = pd.DataFrame(&#123;<span class="string">&#x27;PassengerId&#x27;</span>: df_test[<span class="string">&#x27;PassengerId&#x27;</span>], <span class="string">&#x27;Survived&#x27;</span>: predictions&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 合併 submit(正確答案) 和預測結果兩個DataFrame</span></span><br><span class="line">comparison_df = pd.merge(submit, predictions_aligned, on=<span class="string">&#x27;PassengerId&#x27;</span>, suffixes=(<span class="string">&#x27;_true&#x27;</span>, <span class="string">&#x27;_pred&#x27;</span>)) <span class="comment">#當兩個 DataFrame 中存在同名的欄位時(這裡都是&#x27;Survived&#x27;)，會為它們加上後綴以區分</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 計算準確率</span></span><br><span class="line">accuracy = accuracy_score(comparison_df[<span class="string">&#x27;Survived_true&#x27;</span>], comparison_df[<span class="string">&#x27;Survived_pred&#x27;</span>])</span><br><span class="line"><span class="built_in">print</span>(f<span class="string">&quot;預測準確率為: &#123;accuracy:.4f&#125;&quot;</span>)</span><br></pre></td></tr></table></figure>
 
                 
             </div>
@@ -77,18 +170,20 @@
 
 
     <div class="avator" id="avator">
-    <div class="title">
-        <a href="#" class="text-underline">About Me</a>
-    </div>
-        <img src="me.png" class="ava-img">
-        <h3 class="author">Raymod Hsu</h3>
-        <div class="icon-list">
-        <a href="yourweibo"><i class="iconfont icon-weibo icon-item"></i></a>
-        <a href="mailto:youremail"><i class="iconfont icon-email icon-item"></i></a>
-        <a href="yourgithub"><i class="iconfont icon-github icon-item"></i></a>
-        <a href="yourlinkedin"><i class="iconfont icon-linkedin icon-item"></i></a>
+        <div class="title">
+            <a href="#" class="text-underline">About Me</a>
         </div>
-    <div class="tags">
+        <img src="me.png" class="ava-img">
+        <h3 class="author">
+            Raymond Hsu
+        </h3>
+        <div class="icon-list">
+            <a href="yourweibo"><i class="iconfont icon-weibo icon-item"></i></a>
+            <a href="mailto:youremail"><i class="iconfont icon-email icon-item"></i></a>
+            <a target="_blank" rel="noopener" href="https://github.com/RRRJJJ419"><i class="iconfont icon-github icon-item"></i></a>
+            <a href="yourlinkedin"><i class="iconfont icon-linkedin icon-item"></i></a>
+        </div>
+        <div class="tags">
     <h3 class="tags-title">Tags</h3>
     
 </div>
