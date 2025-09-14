@@ -2,7 +2,7 @@
 title: Titanic - Machine Learning from Disaster
 ---
 ---
-使用機器學習創建一個模型，預測哪些乘客在泰坦尼克號沉船事故中倖存下來.
+創建一個機器學習模型，預測在鐵達尼號沉船事故中的存活率.
 
 Dataset Description : [Titanic](https://www.kaggle.com/competitions/titanic/data)
 
